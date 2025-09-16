@@ -37,7 +37,7 @@ Bienvenido/a al repositorio de la asignatura **Desarrollo Web en Entorno Cliente
 ├── 📁 Practicas
 ├── 📁 Desafios
 ├── 📁 Proyectos
-├── 📁 Recuperacion
+├── 📁 Apuntes
 └── 📁 Examenes
 ```
 
