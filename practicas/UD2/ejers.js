@@ -187,3 +187,5 @@ const iniciarCalculo = function () {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("calcular").addEventListener("click", iniciarCalculo)
 })
+
+
