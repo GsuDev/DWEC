@@ -1,6 +1,6 @@
 
 // Ejercicio 1
-letraDNI = function (numero) {
+const letraDNI = function (numero) {
   // Letras que corresponden al cálculo del DNI
   const letras = "TRWAGMYFPDXBNJZSQVHLCKE"
 
@@ -19,7 +19,7 @@ console.log(letraDNI(12345678))  // Z
 
 
 // Ejercicio 2
-invertirTexto = function (texto) {
+const invertirTexto = function (texto) {
   // Convertimos el texto en un array con split(""),
   // lo invertimos con reverse() y lo unimos con join("")
   return texto.split("").reverse().join("")
@@ -30,10 +30,9 @@ console.log(invertirTexto("Hola mundo"))  // "odnum aloH"
 
 
 // Ejercicio 3
-numerosAleatoriosUnicos = function () {
+const numerosAleatoriosUnicos = function () {
   // Usamos un Set porque no permite duplicados
   const numeros = new Set()
-
   // Mientras no tengamos 100 números, seguimos generando
   while (numeros.size < 100) {
     // Math.random() genera entre 0 y 1, lo multiplicamos por 1000 y sumamos 1
@@ -50,7 +49,7 @@ console.log(numerosAleatoriosUnicos())
 
 
 // Ejercicio 4
-contarLetra = function (frase, letra) {
+const contarLetra = function (frase, letra) {
   let contador = 0
 
   // Recorremos cada carácter de la frase
@@ -69,7 +68,7 @@ console.log(contarLetra("Hola mundo", "o"))  // 2
 
 
 // Ejercicio 5
-divisores = function (numero) {
+const divisores = function (numero) {
   const lista = []
 
   // Recorremos desde 1 hasta el número
@@ -88,7 +87,7 @@ console.log(divisores(28))  // [1, 2, 4, 7, 14, 28]
 
 
 // Ejercicio PUM
-juegoPum = function () {
+const juegoPum = function () {
   // Recupero el container del HTML por id
   const container = document.getElementById('container')
 
@@ -111,7 +110,7 @@ document.addEventListener('DOMContentLoaded', juegoPum)
 // Ejercicio Calcular salarios
 
 // Función que calcula el salario BRUTO de un día según turno
-calcularBruto = function (horas, turno) {
+const calcularBruto = function (horas, turno) {
   if (turno === 'm') return horas * 15   // Mañana → 15€/h
   if (turno === 't') return horas * 17   // Tarde → 17€/h
   if (turno === 'n') return horas * 20   // Noche → 20€/h
@@ -119,14 +118,14 @@ calcularBruto = function (horas, turno) {
 }
 
 // Función que aplica descuentos para obtener el salario NETO mensual
-calcularNeto = function (bruto) {
+const calcularNeto = function (bruto) {
   if (bruto < 600) return bruto * 0.92   // Descuento del 8%
   if (bruto <= 1000) return bruto * 0.90 // Descuento del 10%
   return bruto * 0.88                    // Descuento del 12%
 }
 
 // Función que pide datos de un trabajador completo (su mes entero)
-calcularTrabajador = function (indice) {
+const calcularTrabajador = function (indice) {
   let brutoTotal = 0   // Guardará el bruto mensual de este trabajador
 
   while (true) {
@@ -153,7 +152,7 @@ calcularTrabajador = function (indice) {
 }
 
 // Función principal que controla toda la aplicación 
-iniciarCalculo = function () {
+const iniciarCalculo = function () {
   let resultado = ""        // Texto que mostraremos al final en el HTML
   let totalGlobal = 0       // Acumula todos los salarios netos
   let contadorTrabajadores = 1 // Contador de trabajadores
