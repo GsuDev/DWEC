@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', juegoPum)
 // Ejercicio Calcular salarios
 
 // Función que calcula el salario BRUTO de un día según turno
-function calcularBruto(horas, turno) {
+calcularBruto = function (horas, turno) {
   if (turno === 'm') return horas * 15   // Mañana → 15€/h
   if (turno === 't') return horas * 17   // Tarde → 17€/h
   if (turno === 'n') return horas * 20   // Noche → 20€/h
@@ -119,14 +119,14 @@ function calcularBruto(horas, turno) {
 }
 
 // Función que aplica descuentos para obtener el salario NETO mensual
-function calcularNeto(bruto) {
+calcularNeto = function (bruto) {
   if (bruto < 600) return bruto * 0.92   // Descuento del 8%
   if (bruto <= 1000) return bruto * 0.90 // Descuento del 10%
   return bruto * 0.88                    // Descuento del 12%
 }
 
 // Función que pide datos de un trabajador completo (su mes entero)
-function calcularTrabajador(indice) {
+calcularTrabajador = function (indice) {
   let brutoTotal = 0   // Guardará el bruto mensual de este trabajador
 
   while (true) {
@@ -153,7 +153,7 @@ function calcularTrabajador(indice) {
 }
 
 // Función principal que controla toda la aplicación 
-function iniciarCalculo() {
+iniciarCalculo = function () {
   let resultado = ""        // Texto que mostraremos al final en el HTML
   let totalGlobal = 0       // Acumula todos los salarios netos
   let contadorTrabajadores = 1 // Contador de trabajadores
