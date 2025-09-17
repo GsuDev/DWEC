@@ -6,13 +6,15 @@
 
 ### Funciones
 
-No usamos funciones nombradas, usamos funciones anonimas asociadas a variables y funciones flecha (funciones lambda):
+No usamos funciones nombradas, usamos funciones anonimas asociadas a variables o funciones flecha (funciones lambda):
 
 ```JS
+// Tiene this
 miFuncion = function () {
   // Contenido de la función
 }
 
+// No tienen this
 miSegundaFunción = () => {
   // Contenido de la función
 }
